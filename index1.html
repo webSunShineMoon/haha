@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="css/bootstrap-3.3.4-dist/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/shouye.css">
+	<title>首页</title>
+</head>
+<body>
+	<div class="index">
+		<header class="header">
+			<a href="index.html" class="left1">
+				<i class="glyphicon glyphicon-chevron-left "></i>
+			</a>
+			<h1 class="right1">广播站</h1>
+		</header>	
+		<div class="nav">
+				<ul>
+					<li class="on"><a href="shouye">首页</a></li>
+					<li><a href="zhuanfang">专访</a></li>
+					<li><a href="xinwen">新闻</a></li>
+					<li><a href="shehui">社会</a></li>
+					<li><a href="quwen">趣闻</a></li>
+				</ul>
+			</div>
+		<div class="se" id="se">
+			<div>
+			<div class="banner">
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  		<!-- Indicators -->
+  		<ol class="carousel-indicators">
+    		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    		<li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+    		<li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+    		<li data-target="#carousel-example-generic" data-slide-to="3" class=""></li>
+    		<li data-target="#carousel-example-generic" data-slide-to="4" class=""></li>
+ 		 </ol>
+
+ 		 <!-- Wrapper for slides -->
+  		<div class="carousel-inner" role="listbox">
+   			<div class="item active">
+      			<img src="img/shouye_banner.png" alt="...">
+    		</div>
+    	<div class="item">
+      		<img src="img/shouye_banner2.png" alt="...">
+    	</div>
+    	<div class="item">
+      		<img src="img/shouye_banner.png" alt="...">
+    	</div>
+    	<div class="item">
+      		<img src="img/shouye_banner2.png" alt="...">
+    	</div>
+    	<div class="item">
+      		<img src="img/shouye_banner.png" alt="...">
+    	</div>
+    	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    		<span class="sr-only">Previous</span>
+ 		</a>
+  		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    		<span class="sr-only">Next</span>
+  		</a>
+   	</div>
+	</div>
+
+   		<div class="shou_bottom">
+    		
+    	</div>
+	</div>
+		
+		</div>	
+</div>
+
+	<script src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/iscroll5.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script>
+		var myPage=new IScroll("#se",{
+		    click:true,
+		    probeType:3,
+		    mouseWheel:true
+	    })
+			ajax('shouye');
+	    $(".nav").find('a').on("click",function(e){
+	    		e.preventDefault();
+	    	//	$(".nav a").first().toggle();
+	    		var attr=$(this).attr("href");
+	    		//console.log(attr)
+	    		ajax(attr);
+	    })
+	    function ajax(attr){
+	    	 $.ajax({
+	    	url:"data/data.json",
+	    	type:"post",
+	    	dataType:"json",
+	    	success:function(e){
+	    		//console.log(e.shouye);
+	    		var html="";
+	    		$.each(e,function(key,ele){
+	    			//console.log(ele)
+	    			if(attr==key){
+					$.each(ele,function(i,val){
+	    			//console.log(val)
+	    			html+='<dl>'+
+    					'<dt><img src="'+val.pic+'"></dt>'+
+    					'<dd>'+val.title+'<br><small>'+val.small+'<span>'+val.num+'</span></small></dd>'+
+    				'</dl>';
+	    			})
+    			}
+    		})
+	    		$(".shou_bottom").html(html);
+	    		myPage.refresh();
+	    	}
+	    })
+    }
+	   
+	</script>
+</body>
+</html>

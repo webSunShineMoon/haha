@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" ng-app='myApp'>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+	<title>顶部dl的内容</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4-dist/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" href="css/swiper.css">
+	<link rel="stylesheet" type="text/css" href="css/ind.css">
+<style>
+	.ind_list_main .hf_dl dl{
+		clear: both;
+	}
+	[ng-cloak]{
+		display: none;
+	}
+</style>
+</head>
+<body>
+	<div class="box" ng-controller='box'>
+		<header class='header head_top'>
+				<a href="ind.html"><p class='sao'><img src="img/back.png"></p></a>
+			<input type='text' class='sear'>
+			<p class='qu'>	<img src="img/sao.png"></p>
+		</header>
+		<ul class='Dl_list' id='DL_fei'>
+			<li><a href="#">复合肥</a></li>
+			<li><a href="#">单质肥</a></li>
+		</ul>
+		<ul class='Dl_list Tab_list' style='display:none'>
+			<li><a href="">休闲零食</a></li>
+			<li><a href="">方便食品</a></li>
+			<li><a href="">调味杂粮</a></li>
+		</ul>
+		<div class="main ind_list_main">
+			<div class="hf_dl hf_DL" ng-cloak>
+				 <dl ng-repeat='x in info | orderBy:"price"'>
+					<dt><img src="{{x.url}}"></dt>
+					<dd>
+						<p>{{x.url_p}}</p>
+						<small class='price'>零售价 <span>￥{{x.price}}</span></small>
+						<p class='U_p'>
+							<span class='user'>用券价</span><b class='user_num'>￥{{x.yprice}}</b>
+							<span class='user hui'>会员价</span><b class='user_num num1'>￥{{x.huiprice}}</b>
+						</p>
+						<p class='sell'>销量：<span>{{x.sell}}</span></p>
+					</dd>
+				</dl>
+			</div>
+			<div class="hf_dl Tab_dl">
+				 <dl>
+					<dt><img src="img/dogan.png"></dt>
+					<dd>
+						<p>45%哈哈农庄15-15-15常规硫钾50kg</p>
+						<small class='price'>零售价 <span>￥21.00</span></small>
+						<p class='sell'>销量：<span>1000</span></p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/iscroll5.js"></script>
+<script src='js/angular.js'></script>
+<script>
+   /* var myPage=new IScroll("#main",{
+        click: true,
+        probeType: 3, 
+        mouseWheel: true
+      })*/
+ /*$.ajax({
+        url:"data/ind.json",
+        type:"post",
+        async:false,
+        success:function(data){
+        	var ind_top_list='';
+	      	var Allhtml='';
+				LocalURL=window.location.href;
+			var Lurl=LocalURL.split("?");
+				tit=Lurl[1];
+              	console.log(Lurl[1])
+			              $.each(data,function(a,ala){
+			              //	console.log(a)
+			              	//console.log(data.AllFei)
+			              	if(Lurl[1]==a){
+			              		//console.log(ala)
+			              		$.each(ala,function(e,ele){
+			              			ind_top_list+="<dl>"+
+								"<dt><img src='"+ele.url+"'></dt>"+
+								"<dd>"+
+									"<p>"+ele.url_p+"</p>"+
+									"<small class='price'>零售价 <span>￥"+ele.price+"</span></small>"+
+									"<p class='U_p'>"+
+										"<span class='user'>用券价</span><b class='user_num'>￥"+ele.yprice+"</b>"+
+										"<span class='user hui'>会员价</span><b class='user_num num1'>￥"+ele.huiprice+"</b>"+
+									"</p>"+
+									"<p class='sell'>销量：<span>"+ele.sell+"</span></p>"+
+								"</dd>"+
+							"</dl>";
+			      		})	
+			      	}  
+			})
+			      	$.each(data.AllFei,function(aF,all){
+			      		console.log(all)
+			      			Allhtml+=" <dl>"+
+					"<dt><img src='"+all.url+"'></dt>"+
+					"<dd>"+
+						"<p>"+all.Tab_dl_p+"</p>"+
+						"<small class='price'>零售价 <span>￥"+all.price+"</span></small>"+
+						"<p class='sell'>销量：<span>"+all.D_sell+"</span></p>"+
+					"</dd>"+
+				"</dl>"
+		      	})
+              $('.hf_DL').html(ind_top_list);
+               $('.Tab_dl').html(Allhtml);
+        }
+     })*/
+	var LocalURL=window.location.href;
+	var Lurl=LocalURL.split("?")[1];	
+	console.log(Lurl)
+	var myApp=angular.module('myApp',[]);
+		myApp.controller('box',['$scope','$http',function($scope,$http){
+				$scope.info='';
+				$http.get('data/ind.json')
+						.success(function(e){
+							console.log(e[Lurl])
+							$scope.info=e[Lurl];
+						})
+		}])
+var len=0;
+	$(".Tab_dl").hide();
+        $("#DL_fei").find("a").on("click",function(e){
+        		e.preventDefault();
+        		$(".Tab_list").show();
+        		$(".Tab_list").addClass("on");
+        		$("#DL_fei").hide();
+        		$(".hf_dl").hide();
+        		$(".Tab_dl").show();
+       			len=$('.Dl_list>li>a:visible').size();
+        })
+        	$('.sao').on("click",function(e){
+      			  if(len==3){
+        		e.preventDefault();
+        		$(".Tab_list").hide();
+        		$("#DL_fei").show();
+        		$(".hf_dl").show();
+        		$(".Tab_dl").hide();
+       			len=$('.Dl_list>li>a:visible').size();
+       			console.log(len)
+       		 }
+    	})
+</script>
+</body>
+</html>

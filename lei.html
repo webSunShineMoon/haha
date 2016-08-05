@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chorme=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+	<title>分类</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/shouhou.css">
+</head>
+<body>
+	<div class="box">
+		<header class="header">
+			<input type="text">
+			<img src="img/lei_1.png" alt="">
+		</header>
+		<div class="main lei_main" id="main">
+			<div>
+			<!-- <div class="lei_left">
+				<ul>
+					<li class="on"><a href="">化肥</a></li>
+					<li><a href="">家居家纺</a></li>
+					<li><a href="">海外淘</a></li>
+					<li><a href="">母婴</a></li>
+					<li><a href="">家用电器</a></li>
+					<li><a href="">手机数码</a></li>
+					<li><a href="">个户美妆</a></li>
+				</ul>
+			</div> -->
+			<!-- <div class="lei_right"> -->
+				<!--  <div>
+									<h5>复合肥</h5>
+									<ol>
+										<li><a href="">双模肥</a></li>
+										<li><a href="">常规硫酸钾</a></li>
+										<li><a href="">常规缓释肥</a></li>
+										<li><a href="">硫酸铵钾</a></li>
+									</ol>
+									<h5>复合肥</h5>
+									<ol>
+										<li><a href="">双模肥</a></li>
+										<li><a href="">常规硫酸钾</a></li>
+										<li><a href="">常规缓释肥</a></li>
+										<li><a href="">硫酸铵钾</a></li>
+									</ol>
+								</div>  -->
+			<!-- </div> -->
+			</div>
+		</div>
+		<footer class="footer">
+			<ul>
+				<li><a href="ind.html"><i class="icon-home"></i><br><span>首页</span></a></li>
+				<li class="on"><a href="lei.html"><i class="icon-th-list"></i><br><span>分类</span></a></li>
+				<li><a href=""><i class="icon-shopping-cart"></i><br><span>购物车</span></a></li>
+				<li><a href="Mine.html"><i class="icon-user"></i><br><span>我的</span></a></li>
+			</ul>
+		</footer>
+	</div>
+</body>
+<script src="js/zepto.min.js"></script>
+<script src="js/iscroll5.js"></script>
+<script>
+      
+	$.ajax({
+		url:"js/dataJson.json",
+		type:"post",
+		success:function(data){
+			//console.log(data);
+            leimu(data);
+		},
+		error:function(){
+			alert("连接失败")
+		}
+	})
+
+	function leimu(data){
+        var html="";
+        html+="<div class='lei_left' id='lei_left'><ul>";
+        $.each(data,function(key,val){
+            html+="<li><a>"+val.title+"</a></li>";
+        })
+        html+="</ul></div>";
+        //console.log(html);
+        $("#main").append(html);
+		iscroll1();
+        $("#lei_left").on("click","li",function(){
+        	var idx=$(this).index();
+        	$(this).addClass("on").siblings().removeClass("on");
+        	$(".lei_right>div").show().siblings().hide();
+        	var arr="";
+            arr+="<div class='lei_right'><div>";
+        	$.each(data[idx].data,function(i,v){
+        		arr+="<h5>"+v.title+"</h5><ol>";
+        		console.log(v.content);
+        		$.each(v.content,function(it,vt){
+        			//console.log(vt)
+        			arr+="<li><a>"+vt+"</a></li>";
+        		})
+        	})
+        	
+        	
+        	
+            //console.log(data[idx].data[0].title)//h5复合肥
+        	//console.log(data[idx].data[1].title)//h5单质肥
+        	/*for(var i=0;i<data[idx].data[0].content.length;i++){
+        		//console.log(data[idx].data[0].content[i]);
+        		arr+="<li><a>"+data[idx].data[0].content[i]+"</a></li>";
+        	}*/
+        	arr+="</ol></div></div>";
+        	 
+           $(".main").append(arr);
+        })
+       	
+     iscroll1();
+	}
+	function iscroll1(){
+		var myPage=new IScroll("#lei_left",{
+	        click: true,
+	        probeType: 3, 
+	        mouseWheel: true
+	      })
+	}
+
+ 
+
+	
+</script>
+</html>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+	<title>首页</title>
+	<link rel="stylesheet" href="css/bootstrap-3.3.4-dist/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" href="css/swiper.css">
+	<link rel="stylesheet" type="text/css" href="css/ind.css">
+    	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+	<div class="box">
+		<header class='header'>
+			<p class='sao'>	<img src="img/sao.png"><br><small>扫一扫</small></p>
+			<input type='text' class='sear'>
+			<p class='qu'>	<img src="img/qu.png"><br><small>取货点</small></p>
+		</header>
+		<div class="main">
+			<div class="swiper-container" id="banner">
+                   <div class="swiper-wrapper">
+                     <div class="swiper-slide"><img src="img/banner_02.png" alt=""></div>
+                     <div class="swiper-slide"><img src="img/banner_02.png" alt=""></div>
+                     <div class="swiper-slide"><img src="img/banner_02.png" alt=""></div>
+                     <div class="swiper-slide"><img src="img/banner_02.png" alt=""></div>
+                   </div>
+                   <div class="swiper-pagination"></div>
+            </div>
+            <div class="DD_list">
+            	<!-- <a href="">
+                <dl class='DD_dl'>
+                    <dt><img src="img/dl_3.png"></dt>
+                    <dd>农资</dd>
+                </dl>
+                </a>
+                <a href="">
+                <dl class='DD_dl'>
+                    <dt><img src="img/dl_06.png"></dt>
+                    <dd>农资</dd>
+                </dl>
+                </a>
+                <a href="">
+                <dl class='DD_dl'>
+                    <dt><img src="img/dl_09.png"></dt>
+                    <dd>农资</dd>
+                </dl>
+                </a>
+                <a href="">
+                <dl class='DD_dl'>
+                    <dt><img src="img/dl_15.png"></dt>
+                    <dd>农资</dd>
+                </dl>
+                </a>
+                <a href="">
+                <dl class='DD_dl'>
+                    <dt><img src="img/dl_18.png"></dt>
+                    <dd>农资</dd>
+                </dl>
+                </a>
+                <a href="">
+                <dl class='DD_dl'>
+                    <dt><img src="img/dl_20.png"></dt>
+                    <dd>农资</dd>
+                </dl>
+                </a>
+                <a href="">
+                <dl class='DD_dl'>
+                    <dt><img src="img/dl_22.png"></dt>
+                    <dd>农资</dd>
+                </dl>
+                </a>
+                <a href="">
+                <dl class='DD_dl'>
+                    <dt><img src="img/dl_3.png"></dt>
+                    <dd>农资</dd>
+                </dl>
+                </a> -->
+            </div>
+            <div class="head_p">
+            	<img src="img/head_p.png">
+            </div>
+            <div class="head_top">
+            	<img src="img/head_top.png">
+            </div>
+            <div class="Big_dl" id='Big_dl'>
+            	
+            </div>
+            <img src="img/tu_ind.png" class='tu_ind'>
+              <div class="head_top">
+                <img src="img/new_good.png">
+            </div>
+            <div class="Big_dl">
+               <!--  <dl>
+                   <dt><img src="img/dl (2).png"></dt>
+                   <dd>
+                       <p>苏泊尔智能电饭锅</p>
+                       <p class='small'>￥249</p>      
+                   </dd>
+               </dl>
+               <dl>
+                   <dt><img src="img/dl (1).png"></dt>
+                   <dd>
+                  <p>苏泊尔智能电饭锅</p>
+                      <p class='small'>￥249</p>          
+                   </dd>
+               </dl>
+               <dl>
+                   <dt><img src="img/dl (3).png"></dt>
+                   <dd>
+                  <p>苏泊尔智能电饭锅</p>
+                       <p class='small'>￥249</p>        
+                   </dd>
+               </dl> -->
+            </div>
+		</div>
+	<footer class="footer">
+			<ul>
+				<li class="on"><a href="ind.html"><i class="icon-home"></i><br><span>首页</span></a></li>
+				<li><a href="lei.html"><i class="icon-th-list"></i><br><span>分类</span></a></li>
+				<li><a href=""><i class="icon-shopping-cart"></i><br><span>购物车</span></a></li>
+				<li><a href="Mine.html"><i class="icon-user"></i><br><span>我的</span></a></li>
+			</ul>
+			
+		</footer>
+	</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/iscroll5.js"></script>
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript" src='js/handlebars-v4.0.5.js'></script>
+<script id="moban" type="text/x-handlebars-template">
+     {{#each this.Big_dl}}
+        <a href='business.html?{{url}}'><dl>
+                   <dt><img src='{{url}}'></dt>
+                  <dd>
+                        <p>{{url_T}}</p>
+                      <p class='small'>{{small}}</p>   
+                    </dd>
+                </dl></a>
+       {{/each}}
+</script>
+<script id="moban1" type="text/x-handlebars-template">
+    {{#each this.DL_top}}
+          <a href="ind_top_dl_list.html?{{url_TP}}">
+                <dl class='DD_dl'>
+                    <dt><img src="{{url}}"></dt>
+                    <dd>{{url_T}}</dd>
+                </dl>
+                </a>  
+       {{/each}}
+</script>
+<script>
+ $(function(){
+   /* var myPage=new IScroll("#main",{
+        click: true,
+        probeType: 3, 
+        mouseWheel: true
+      })*/
+	 var mySwiper = new Swiper('.swiper-container',{
+        pagination : '.swiper-pagination',
+    })
+ /*
+     $.ajax({
+        url:"data/ind.json",
+        type:"post",
+        success:function(e){
+                var DL_html='',Big_dl_html='';
+            $.each(e.DL_top,function(i,ele){
+                DL_html+="<a href='ind_top_dl_list.html?"+ele.url_TP+"'>"+
+               " <dl class='DD_dl'>"+
+                  "  <dt><img src='"+ele.url+"'></dt>"+
+                    "<dd>"+ele.url_T+"</dd>"+
+                "</dl>"+
+                "</a>"
+            })
+           $.each(e.Big_dl,function(i,ele){
+               // console.log(ele)
+               Big_dl_html+="<a href='business.html?"+ele.url+"'><dl>"+
+                   " <dt><img src='"+ele.url+"'></dt>"+
+                   " <dd>"+
+                        "<p>"+ele.url_T+"</p>"+
+                       " <p class='small'>"+ele.small+"</p>  "+    
+                   " </dd>"+
+                "</dl></a>"
+            })
+            $('.DD_list').html(DL_html);
+          //  $('.Big_dl').html(Big_dl_html)
+        }
+     })*/
+        $.post('data/ind.json',function(e){
+          console.log(e)
+         // var e=JSON.parse(data);
+       //注册一个Handlebars模版，通过id找到某一个模版，获取模版的html框架
+          var ohtml=$('#moban').html(),ohtml1=$('#moban1').html()
+       //将json对象用刚刚注册的Handlebars模版封装，得到最终的html，插入到基础table中。
+           moban=Handlebars.compile(ohtml),moban1=Handlebars.compile(ohtml1);
+         $('.Big_dl').html(moban(e));
+          $('.DD_list').html(moban1(e))
+        })
+     })
+     
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chorme=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+	<title>售后服务</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/shouhou.css">
+</head>
+<body>
+	<div class="box">
+		<header class="header">
+			<a href="#" class="left selectHotel"><i class="icon-angle-left"></i></a>
+			<h1 class="header_content">
+				<ul class="nav_group top-headerNav">
+					<li class="item active"><a href="shouhou.html">售后服务</a></li>
+					<li class="item"><a href="quxiao.html">取消订单</a></li>
+				</ul>
+			</h1>
+		</header>
+		<div class="main">
+			<section>
+				<div class="shouhou_dls">
+					<dl>
+						<dt><img src="img/shouhou_1.png" alt=""></dt>
+						<dd>暂时还没有相关内容，看看别的？</dd>
+					</dl>
+			    </div>
+			</section>
+			<!-- <section>
+				<div class="shouhou_dls">
+					<dl>
+						<dt><img src="img/shouhou_1.png" alt=""></dt>
+						<dd>暂时还没有相关内容，看看别的？</dd>
+					</dl>
+			    </div>
+			</section> -->
+			
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script>
+    var index=0,num=$(".nav_group>li").length;
+    console.log(num)
+	$(".nav_group .item").on("click",function(){
+       index=$(this).index();
+       auto(index);
+	})
+
+	function auto(index){
+		$('.uls li').eq(index).addClass('active').siblings().removeClass('active');
+				var steep=-index*100;
+				$('.content').css({
+					 '-webkit-transition':'left .3s',
+					 'left':steep+'%'
+				});
+	}
+</script>
+</html>

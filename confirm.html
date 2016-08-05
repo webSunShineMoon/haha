@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"> 
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+	    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+	    <meta content="telephone=no" name="format-detection"> 
+	    <meta content="email=no" name="format-detection"> 
+		<link rel="stylesheet" href="css/haha.css" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<title>确认订单</title>
+	</head>
+	<body>
+		<div class="wrap" style="background: #efefef;">
+			<header class="header2" style="border-bottom:1px solid #dcdddd;">
+				<a href="#" id='return'><i class="icon icon-angle-left"></i></a>
+				<h2>确认订单</h2>
+			</header>
+			<div class="confirmList" id="container">
+				<div>
+					<div class="listUl">
+						<ul>
+							<li>选择优惠券<i class="icon icon-angle-right"></i><a href="#"></a></li>
+							<li>设置发票<i class="icon icon-angle-right"></i><span>不开发票</span><a href="#"></a></li>
+							<li>配送方式<span>上门自提</span><a href="#"></a></li>
+							<li>取货门店<i class="icon icon-angle-right"></i><span>新都取货门店体验</span><a href="#"></a></li>
+							<li>门店电话<span>15835486835</span><a href="#"></a></li>
+							<li>门店位置<span>四川省成都市新都区容都大道138号</span><a href="#"></a></li>
+						</ul>
+					</div>
+					<div class="money">
+						<ul>
+							<li><a href="#">商品总额</a><span class='sum'></span></li>
+							<li><a href="#">用券金额</a><span class='userP'>0.00</span></li>
+							<li><a href="#">立减金额</a><span class='onceP'>0.00</span></li>
+						</ul>
+					</div>
+					<div class="payFor">
+						<h2>实付款:<b>￥209.00</b></h2>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<button>立即下单</button>
+			</div>
+		</div>
+	<script src="js/zepto.min.js"></script>
+	<script src="js/iscroll4.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var menuPage=new iScroll("container",{
+			onBeforeScrollStart:function(e){
+				var tagName=e.target.nodeName.toLowerCase();
+				if(tagName!="input" && tagName!="select" && tagName!="textarea" && tagName!="a"){
+					e.preventDefault();	
+				}		
+			}
+		})
+  $('#return').on('click',function(){
+         history.go(-1);
+    })
+		var price=209,
+			sum=0,
+			arr=window.location.href.split('?');
+			n=arr[1],
+			userP=parseInt($('.userP').html());
+				console.log(userP)
+			onceP=parseInt($('.onceP').html());
+		$('.sum').text("￥"+n*price);
+		$('.payFor').find('b').html(n*price-userP-onceP);
+	</script>
+	</body>
+</html>

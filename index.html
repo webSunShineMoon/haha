@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"> 
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+	    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+	    <meta content="telephone=no" name="format-detection"> 
+	    <meta content="email=no" name="format-detection"> 
+		<link rel="stylesheet" href="css/haha.css" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<title></title>
+	</head>
+	<body>
+		<div class="wrap">
+			<header class="header">
+				<h2>哈哈农庄</h2>
+			</header>
+			<div class="haContent" id="container">
+				<div>
+					<div class="banner">
+						<div class="swiper-container">
+						    <div class="swiper-wrapper">
+						        <div class="swiper-slide"><img src="img/img_list_02.png" alt="" /></div>
+						        <div class="swiper-slide"><img src="img/img_list_02.png" alt="" /></div>
+						        <div class="swiper-slide"><img src="img/img_list_02.png" alt="" /></div>
+						    </div>
+	   						<!-- 如果需要分页器 -->
+	   						<div class="swiper-pagination"></div>
+	   						 <!-- 如果需要导航按钮 -->
+						    <!--<div class="swiper-button-prev"></div>
+						    <div class="swiper-button-next"></div>-->
+	    					<!-- 如果需要滚动条 -->
+	    					<!--<div class="swiper-scrollbar"></div>-->
+						</div>
+					</div>
+					<div class="pic">
+						<div class="picList">
+							<a href="ind.html"><li><img src="img/img_list_03.png" alt="" /></li></a>
+							<a href=""><li><img src="img/img_list_04.png" alt="" /></li></a>
+						</div>
+						<div class="picList">
+							<a href="try1.html"><li><img src="img/img_list_05.png" alt="" /></li></a>
+							<a href="try2.html"><li><img src="img/img_list_06.png" alt="" /></li></a>
+						</div>
+						<div class="picList">
+							<a href="index1.html"><li><img src="img/img_list_07.png" alt="" /></li></a>
+							<a href=""><li><img src="img/img_list_08.png" alt="" /></li></a>
+							<a href=""><li><img src="img/img_list_09.png" alt="" /></li></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<nav>
+					<ul>
+						<a href="index1.html">
+							<li>
+								<a href="index1.html"><i class="icon icon-comment"></i></a><br />
+								<small>消息</small>
+							</li>
+						</a>
+						<li>
+							<a href="#"><i class="icon icon-home"></i></a><br />
+							<small>首页</small>
+						</li>
+						<li>
+							<a href="#" class="icon icon-user"><i></i></a><br />
+							<small>我的</small>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
+		<script src="js/iscroll4.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script>      
+			  var mySwiper = new Swiper ('.swiper-container', {
+			    loop: true,
+			    // 如果需要分页器
+			    pagination: '.swiper-pagination',
+			    // 如果需要前进后退按钮
+			    /*nextButton: '.swiper-button-next',
+			    prevButton: '.swiper-button-prev',*/
+			    // 如果需要滚动条
+			   /* scrollbar: '.swiper-scrollbar',*/
+			  })  
+			  
+			var menuPage=new iScroll("container",{
+			onBeforeScrollStart:function(e){
+				var tagName=e.target.nodeName.toLowerCase();
+				if(tagName!="input" && tagName!="select" && tagName!="textarea" && tagName!="a"){
+					e.preventDefault();	
+				}		
+			}
+		})
+		</script>
+	</body>
+</html>

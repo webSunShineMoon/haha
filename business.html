@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"> 
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+	    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+	    <meta content="telephone=no" name="format-detection"> 
+	    <meta content="email=no" name="format-detection"> 
+		<link rel="stylesheet" href="css/haha.css" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+
+		<title></title>
+	</head>
+	<body>
+		<div class="wrap">
+			<header class="header2">
+				<a href="ind.html"><i class="icon icon-angle-left"></i></a>
+				<h2>商品详情</h2>
+			</header>
+			<div class="bussionList">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="img/big_pic_03.png" alt="" /></div>
+						<div class="swiper-slide"><img src="img/big_pic_03.png" alt="" /></div>
+						<div class="swiper-slide"><img src="img/big_pic_03.png" alt="" /></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<div class="wenBox" id="container">
+						<div>
+							<div class="wenListBox">
+							<h2>苏泊尔智能电饭煲CFXB40FC829C-75</h2>
+							<p><b>209:00</b><span>销量：12笔</span><strong>有货</strong></p>
+							<div class="share"><span><img src="img/small_pic_03.png" alt="" /></span>四川   成都市   新都区  新都总部体验店</div>
+						</div>
+						<div class="wenListBox">
+							<h2>苏泊尔智能电饭煲CFXB40FC829C-75</h2>
+							<p><b>209:00</b><span>销量：12笔</span><strong>有货</strong></p>
+							<div class="share"><span><img src="img/small_pic_03.png" alt="" /></span>四川   成都市   新都区  新都总部体验店</div>
+						</div>
+					</div>
+					<div>
+					<div class="listUl">
+						<ul>
+							<li>选择优惠券<i class="icon icon-angle-right"></i><a href="#"></a></li>
+							<li>设置发票<i class="icon icon-angle-right"></i><span>不开发票</span><a href="#"></a></li>
+							<li>配送方式<span>上门自提</span><a href="#"></a></li>
+							<li>取货门店<i class="icon icon-angle-right"></i><span>新都取货门店体验</span><a href="#"></a></li>
+							<li>门店电话<span>15835486835</span><a href="#"></a></li>
+							<li>门店位置<span>四川省成都市新都区容都大道138号</span><a href="#"></a></li>
+						</ul>
+					</div>
+					<div class="money">
+						<ul>
+							<li><a href="#">商品总额</a><span class='sum'></span></li>
+							<li><a href="#">用券金额</a><span class='userP'>0.00</span></li>
+							<li><a href="#">立减金额</a><span class='onceP'>0.00</span></li>
+						</ul>
+					</div>
+					<div class="payFor">
+						<h2>实付款:<b>￥209.00</b></h2>
+					</div>
+				</div>
+				</div>
+				<div class="ulList">
+					<ul>
+						<li><span>V</span><a href="#">哈哈农场</a></li>
+						<li><span>V</span><a href="#">极速退款</a></li>
+						<li><span>V</span><a href="#">7天退换</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="go">
+					<div class="left">
+						<ul>
+							<li><span><img src="img/small_pic_07.png" alt="" /></span><a href="#">关注</a></li>
+							<li><span><img src="img/small_pic_09.png" alt="" /></span><a href="#">购物车</a></li>
+						</ul>
+					</div>
+					<div class="right">
+						<ul>
+							<li class="add" id='add_sell'><a href="#">加入购物车</a></li>
+							<li class="buy" id='once_sell'><a href="#">立即购买</a></li>
+						</ul>
+					</div>
+				</div>
+		</div>
+		<div class="add_bg" style='display:none'></div>
+		<div class="add_con" style='display:none'>
+			<b class='delegect'>X</b>
+			<dl>
+				<dt><img src="img/big_pic_03.png"></dt>
+				<dd>
+					<small>￥209.00</small>
+					<p>四川成都市新都区<span>有货</span></p>
+					<p>库存: <b>2</b></p>
+				</dd>
+			</dl>
+			<p class='sell_num'>购买数量：<button id='jian'>-</button><b id='T'>1</b><button id='add'>+</button></p>
+			<button class='btn red' onclick='confirm()'>确定</button>
+		</div>
+	<script src="js/zepto.min.js"></script>
+	<script src="js/iscroll4.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script>
+        var have=1;
+	var url=window.location.href;
+	arr=url.split('?');
+	//console.log(url.split('?'));
+	$(".swiper-slide").find('img').attr("src",arr[1]);
+	$('.add_con').find('img').attr('src',arr[1]);
+	$('#once_sell').on("click",function(e){
+			e.preventDefault();
+		$(".add_bg").show();
+		$(".add_bg").css("opacity",'0.5');
+		$(".add_con").show();
+        have=1;
+	})
+	$("#add_sell").on("click",function(e){
+		e.preventDefault();
+		$(".add_bg").show(); 
+		$(".add_bg").css("opacity",'0.5');
+		$(".add_con").show();
+         have=0;
+	})
+	$(".delegect").on("click",function(){
+		$(".add_bg").hide();
+		$(".add_con").hide();
+	})
+	$("#jian").on('click',function(){
+		var i=$("#T").text();
+		i--;
+		if(i<=0) i=0;
+		$("#T").text(i)
+	})
+	$("#add").on('click',function(){
+		var i=$("#T").text();
+		i++;
+		$("#T").text(i)
+	})
+		var mySwiper = new Swiper ('.swiper-container', {
+			    loop: true,
+			    // 如果需要分页器
+			    pagination: '.swiper-pagination',
+			  }) 
+			var menuPage=new iScroll("container",{
+			onBeforeScrollStart:function(e){
+				var tagName=e.target.nodeName.toLowerCase();
+				if(tagName!="input" && tagName!="select" && tagName!="textarea" && tagName!="a"){
+					e.preventDefault();	
+				}		
+			}
+		})
+function confirm(){
+    if(have==1){
+	   var n=$("#T").text();
+	   window.location.href='confirm.html?'+n;
+    }else{
+        $(".add_bg").hide();
+		$(".add_con").hide();
+    }
+}
+	</script>
+	</body>
+</html>

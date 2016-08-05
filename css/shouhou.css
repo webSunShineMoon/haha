@@ -1,0 +1,618 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body, .box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 100px; }
+
+li {
+  list-style: none; }
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box; }
+
+a, button, input, optgroup, select, textarea {
+  -webkit-tap-highlight-color: transparent; }
+
+a {
+  text-decoration: none; }
+
+/***********************box*****************************/
+.box {
+  display: -webkit-box;
+  -webkit-box-orient: vertical; }
+
+/*************************header******************************/
+.header {
+  width: 100%;
+  height: 0.48rem;
+  background: #F7F8F8;
+  position: relative;
+  overflow: hidden;
+  z-index: 100; }
+  .header h1 {
+    position: absolute;
+    height: 0.48rem;
+    left: 0.48rem;
+    right: 0.48rem;
+    text-align: center;
+    line-height: 0.48rem;
+    font-size: 0.2rem; }
+  .header p {
+    position: absolute;
+    height: 0.48rem;
+    left: 0.48rem;
+    right: 0.48rem;
+    text-align: left;
+    line-height: 0.48rem;
+    font-size: 0.2rem; }
+  .header input {
+    position: absolute;
+    left: 0.4rem;
+    top: 0.05rem;
+    bottom: 0.05rem;
+    width: 70%;
+    background: url(../img/lei_2.png) no-repeat 5px #fff;
+    background-size: 0.13rem 0.13rem;
+    border: 1px solid #ccc;
+    border-radius: 5px; }
+  .header img {
+    float: right;
+    width: 0.25rem;
+    height: 0.25rem;
+    margin-right: 10px;
+    margin-top: 10px; }
+
+.header_content {
+  position: absolute;
+  left: 0.48rem;
+  right: 0.48rem;
+  height: 100%;
+  top: 0;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center; }
+  .header_content i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    z-index: 10;
+    margin-top: -6px; }
+
+.left {
+  float: left;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  padding: 0px 10px; }
+
+.right {
+  float: right;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  padding: 0px 10px; }
+
+/************************************************/
+.nav_group {
+  width: 100%;
+  display: -webkit-box;
+  height: 0.30rem;
+  border: 1px solid #DC214C;
+  border-radius: 5px; }
+  .nav_group .item {
+    -webkit-box-flex: 1;
+    width: 0px;
+    line-height: 0.30rem;
+    border-left: 1px solid #DC214C; }
+    .nav_group .item a {
+      color: #DC214C;
+      display: block;
+      width: 100%;
+      height: 100%; }
+  .nav_group .item.active {
+    background: #DC214C; }
+    .nav_group .item.active a {
+      color: #fff; }
+
+/***************************main*****************************/
+.main {
+  -webkit-box-flex: 1;
+  -webkit-box-orient: horizontal; }
+  .main section {
+    width: 100%; }
+  .main .Mydingd_uls {
+    width: 100%;
+    background: #fff;
+    text-align: center; }
+    .main .Mydingd_uls ul {
+      display: -webkit-box;
+      padding-top: 20px; }
+      .main .Mydingd_uls ul li {
+        -webkit-box-flex: 1; }
+        .main .Mydingd_uls ul li img {
+          width: 0.27rem;
+          height: 0.25rem; }
+
+.Mydingd {
+  background: #F2F2F2;
+  display: -webkit-box; }
+
+/*************************shouhou_dls*************************/
+.shouhou_dls {
+  width: 100%;
+  display: -webkit-box;
+  margin-top: 0.61rem; }
+  .shouhou_dls dl {
+    -webkit-box-flex: 1;
+    height: 1.34rem;
+    text-align: center;
+    margin: 0 auto;
+    display: block; }
+    .shouhou_dls dl dt {
+      width: 0.87rem;
+      height: 0.87rem;
+      display: block;
+      margin: 0 auto; }
+      .shouhou_dls dl dt img {
+        width: 100%;
+        height: 100%;
+        display: block; }
+    .shouhou_dls dl dd {
+      font-size: 0.14rem;
+      line-height: 0.4rem; }
+
+/************************zhuanpiao_form*********************/
+.zhuanpiao_form {
+  padding: 10px; }
+  .zhuanpiao_form p {
+    width: 100%;
+    padding-bottom: 10px; }
+    .zhuanpiao_form p label {
+      width: 100%;
+      height: 0.3rem;
+      display: block;
+      line-height: 0.3rem; }
+    .zhuanpiao_form p input {
+      width: 100%;
+      height: 0.3rem;
+      border-radius: 5px;
+      border: 1px solid #000;
+      padding: 0 10px; }
+
+/******************************zhuanpiao_text*******************************/
+.zhuanpiao_text {
+  width: 100%;
+  padding: 10px; }
+  .zhuanpiao_text p {
+    width: 100%;
+    height: 0.62rem;
+    line-height: 0.62rem;
+    margin-bottom: 10px; }
+    .zhuanpiao_text p a {
+      float: left;
+      width: 40%; }
+    .zhuanpiao_text p span {
+      float: left;
+      background: #E6E6E6;
+      width: 0.62rem;
+      height: 0.62rem;
+      display: block;
+      text-align: center;
+      line-height: 0.62rem;
+      font-size: 0.26rem;
+      color: #CCCCCC; }
+  .zhuanpiao_text button {
+    width: 100%;
+    height: 0.33rem;
+    background: #DC214C;
+    color: #fff;
+    border-radius: 5px; }
+
+/******************Mybank_b******************************/
+.Mybank_b {
+  padding: 10px; }
+  .Mybank_b button {
+    width: 100%;
+    height: 0.36rem;
+    background: #DC214C;
+    color: #fff;
+    border-radius: 5px; }
+
+.My_form {
+  padding: 10px; }
+  .My_form form {
+    border: 1px solid #999;
+    border-radius: 5px; }
+    .My_form form p {
+      width: 100%;
+      height: 0.32rem;
+      line-height: 0.32rem;
+      padding: 0 10px;
+      border-bottom: 1px solid #ccc; }
+      .My_form form p label {
+        width: 25%;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        display: block;
+        float: left; }
+      .My_form form p input {
+        height: 0.26rem;
+        width: 70%;
+        border: 0; }
+      .My_form form p i {
+        float: right;
+        line-height: 0.26rem; }
+      .My_form form p span {
+        float: right;
+        line-height: 0.26rem; }
+  .My_form button {
+    width: 100%;
+    height: 0.36rem;
+    background: #DC214C;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px; }
+
+/***********************************setPwd_form**********************************/
+.setPwd_form {
+  padding: 10px; }
+  .setPwd_form form {
+    width: 100%; }
+    .setPwd_form form p {
+      width: 100%; }
+      .setPwd_form form p input {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 0.3rem;
+        margin-bottom: 10px;
+        padding: 0 10px; }
+      .setPwd_form form p label {
+        padding-left: 5px;
+        color: #DC214C; }
+    .setPwd_form form button {
+      width: 100%;
+      height: 0.36rem;
+      background: #DC214C;
+      color: #fff;
+      border-radius: 5px;
+      margin-top: 10px; }
+
+/**************************leader_uls******************************/
+.leader_uls {
+  width: 100%; }
+  .leader_uls ul {
+    width: 100%;
+    padding: 10px; }
+    .leader_uls ul li {
+      width: 100%;
+      height: 0.46rem;
+      line-height: 0.46rem;
+      border-bottom: 1px solid #EFEFEF; }
+      .leader_uls ul li a {
+        float: left; }
+      .leader_uls ul li i {
+        float: right;
+        line-height: 0.46rem; }
+  .leader_uls .server_left {
+    float: left; }
+    .leader_uls .server_left p {
+      line-height: 0.46rem; }
+  .leader_uls .server_right {
+    float: right;
+    color: #16ABE3;
+    text-align: right; }
+    .leader_uls .server_right p {
+      float: left;
+      color: #16ABE3; }
+    .leader_uls .server_right img {
+      float: left;
+      width: 0.15erm;
+      height: 0.15rem; }
+
+/*************************all_p***************************/
+.all_p {
+  width: 100%; }
+  .all_p p {
+    text-align: center;
+    font-size: 0.14rem;
+    color: #689ACC; }
+    .all_p p i {
+      font-size: 0.16rem;
+      color: #027DC3;
+      padding-right: 5px; }
+
+/*************************Mine_tou**************************/
+.Mine_tou {
+  width: 100%;
+  height: 0.83rem;
+  background-image: -webkit-gradient(linear, 0 top, 0 bottom, color-stop(0%, #E99E5D), color-stop(100%, #890B3A)); }
+  .Mine_tou dl {
+    width: 100%;
+    padding: 10px; }
+    .Mine_tou dl dt {
+      width: 0.61rem;
+      height: 0.61rem;
+      display: block;
+      float: left; }
+      .Mine_tou dl dt img {
+        width: 100%;
+        height: 100%; }
+    .Mine_tou dl dd {
+      float: left;
+      padding-left: 10px;
+      padding-top: 10px;
+      color: #fff; }
+      .Mine_tou dl dd p {
+        line-height: 0.24rem; }
+
+/***********************footer********************/
+.footer {
+  width: 100%;
+  height: 0.36rem;
+  background: #F3F4F6;
+  position: relative;
+  z-index: 100; }
+  .footer ul {
+    width: 100%;
+    display: -webkit-box;
+    text-align: center; }
+    .footer ul li {
+      -webkit-box-flex: 1; }
+      .footer ul li a i {
+        font-size: 14px; }
+      .footer ul li a span {
+        font-size: 10px; }
+    .footer ul li.on a {
+      color: #F23030; }
+
+/*********************Mine_main*********************/
+.Mine_main {
+  width: 100%;
+  padding: 10px; }
+  .Mine_main .Mine_item {
+    width: 100%;
+    height: 0.41rem;
+    border-bottom: 1px solid #eee; }
+    .Mine_main .Mine_item dl {
+      float: left; }
+      .Mine_main .Mine_item dl dt {
+        width: 0.2rem;
+        height: 0.23rem;
+        float: left;
+        margin-top: 7px; }
+        .Mine_main .Mine_item dl dt img {
+          width: 100%;
+          height: 100%; }
+      .Mine_main .Mine_item dl dd {
+        float: left;
+        line-height: 0.41rem;
+        padding-left: 5px; }
+    .Mine_main .Mine_item p {
+      float: right;
+      line-height: 0.41rem; }
+      .Mine_main .Mine_item p a {
+        color: #BEBFBF; }
+      .Mine_main .Mine_item p i {
+        font-size: 0.16rem;
+        padding-left: 10px; }
+
+/************************Mine_uls********************************/
+.Mine_uls {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px; }
+
+/************************Mine_list***************************/
+.Mine_list {
+  width: 100%; }
+  .Mine_list ul {
+    width: 100%;
+    display: -webkit-box;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #ccc; }
+    .Mine_list ul li {
+      -webkit-box-flex: 1;
+      border-right: 1px solid #eee; }
+      .Mine_list ul li a {
+        color: #9FA0A0; }
+
+/*******************************z_header*******************************/
+.z_header {
+  background: #E35A16; }
+  .z_header a {
+    color: #fff; }
+  .z_header h1 {
+    color: #fff; }
+  .z_header p {
+    color: #fff; }
+
+/************************************Mymessage_uls************************************/
+.Mymessage_uls {
+  width: 100%;
+  padding: 10px; }
+  .Mymessage_uls ul {
+    width: 100%;
+    margin-bottom: 10px;
+    border-top: 1px solid #eee; }
+    .Mymessage_uls ul li {
+      dispaly: -webkit-box;
+      height: 0.44rem;
+      border-bottom: 1px solid #eee; }
+      .Mymessage_uls ul li a {
+        width: 30%;
+        line-height: 0.44rem;
+        display: inline-block; }
+      .Mymessage_uls ul li input {
+        -webkit-box-flex: 1;
+        height: 0.28rem;
+        display: inline-block;
+        width: 70%;
+        border: 0;
+        text-align: right; }
+
+.tiyandian_top {
+  width: 100%;
+  height: 1.52rem;
+  background: #EE5D26;
+  text-align: center;
+  margib: 0 auto; }
+  .tiyandian_top dl {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10px; }
+    .tiyandian_top dl dt {
+      width: 0.84rem;
+      height: 0.84rem;
+      margin: 0 auto; }
+      .tiyandian_top dl dt img {
+        width: 100%;
+        height: 100%; }
+    .tiyandian_top dl dd {
+      padding-top: 10px; }
+      .tiyandian_top dl dd p {
+        color: #fff; }
+
+/****************************tiyandian_uls****************************/
+.tiyandian_uls {
+  width: 100%;
+  padding: 10px; }
+  .tiyandian_uls ul {
+    width: 100%; }
+    .tiyandian_uls ul li {
+      height: 0.4rem;
+      line-height: 0.4rem;
+      border-bottom: 1px solid #ccc; }
+      .tiyandian_uls ul li a {
+        width: 20%;
+        height: 0.4rem;
+        display: inline-block;
+        color: #8A8A8A; }
+      .tiyandian_uls ul li input {
+        width: 80%;
+        height: 0.34rem;
+        border: 0;
+        color: #999; }
+
+.yijianfk_form {
+  width: 100%;
+  padding: 10px; }
+  .yijianfk_form textarea {
+    width: 100%;
+    height: 1.1rem;
+    color: #A4A4A4;
+    padding: 10px; }
+  .yijianfk_form button {
+    width: 100%;
+    height: 0.4rem;
+    background: #E77150;
+    color: #fff;
+    margin-top: 20px; }
+
+/**********************************regeter_top**************************************/
+.regeter_top {
+  width: 100%;
+  padding: 10px;
+  text-align: center; }
+  .regeter_top img {
+    width: 1.47rem;
+    height: 0.34rem;
+    margin-top: 50px;
+    margin-bottom: 40px; }
+  .regeter_top form {
+    text-align: left;
+    border-top: 1px solid #eee; }
+    .regeter_top form p {
+      height: 0.4rem;
+      line-height: 0.4rem;
+      border-bottom: 1px solid #eee; }
+      .regeter_top form p label {
+        width: 20%;
+        height: 0.4rem;
+        display: inline-block; }
+      .regeter_top form p input {
+        width: 80%;
+        height: 0.35rem;
+        border: 0; }
+  .regeter_top .reg_text {
+    width: 100%;
+    text-align: left;
+    height: 0.4rem;
+    line-height: 0.4rem; }
+    .regeter_top .reg_text span {
+      float: left;
+      line-height: 0.4rem;
+      color: #F0A863; }
+    .regeter_top .reg_text a {
+      float: right;
+      line-height: 0.4rem;
+      color: #F0A863; }
+  .regeter_top button {
+    width: 100%;
+    height: 0.4rem;
+    background: #E9811A;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px; }
+
+/*********************************lei_main******************************************/
+.lei_main {
+  background: #F7F8F8;
+  padding: 10px 0;
+  position: relative; }
+
+/**********************************lei_left*****************************************/
+.lei_left {
+  width: 30%;
+  position: absolute;
+  left: 0; }
+  .lei_left ul {
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+    .lei_left ul li {
+      height: 0.52rem;
+      line-height: 0.52rem;
+      border-bottom: 1px solid #ccc;
+      background: #EFEFEF; }
+  .lei_left ul li.on {
+    background: #FFF; }
+    .lei_left ul li.on a {
+      color: #DE2C55; }
+
+.lei_right {
+  width: 70%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 30%;
+  top: 10px; }
+  .lei_right div {
+    width: 100%;
+    padding: 10px;
+    padding-top: 30px;
+    padding-right: 0.3rem;
+    position: absolute;
+    left: 0%;
+    top: 10px;
+    background: #fff; }
+  .lei_right h5 {
+    color: #B5B5B6;
+    line-height: 0.3rem;
+    height: 0.3rem;
+    clear: both; }
+  .lei_right ol {
+    clear: both;
+    width: 100%;
+    display: block; }
+    .lei_right ol li {
+      line-height: 0.3rem;
+      float: left;
+      padding-right: 20px; }
+
+/*# sourceMappingURL=shouhou.css.map */

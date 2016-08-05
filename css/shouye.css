@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body, .index {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 100px; }
+
+li {
+  list-style: none; }
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box; }
+
+a, button, input, optgroup, select, textarea {
+  -webkit-tap-highlight-color: transparent; }
+
+a {
+  text-decoration: none; }
+
+/**************index****************/
+.index {
+  display: -webkit-box;
+  -webkit-box-orient: vertical; }
+
+.header {
+  width: 100%;
+  height: 0.41rem;
+  background: #FF6C38;
+  position: relative;
+  z-index: 10;
+  color: #fff; }
+
+.left1 {
+  width: 10%;
+  float: left;
+  position: absolute;
+  line-height: 0.41rem;
+  left: 0.1rem;
+  color: #fff; }
+
+.right1 {
+  width: 90%;
+  float: left;
+  position: absolute;
+  line-height: 0.41rem;
+  text-align: center;
+  left: 5%;
+  font-weight: bold; }
+
+.nav {
+  width: 100%;
+  background: #ccc;
+  position: relative;
+  z-index: 15; }
+  .nav ul {
+    width: 100%; }
+    .nav ul li {
+      width: 20%;
+      float: left;
+      text-align: center;
+      line-height: 0.34rem; }
+
+.item {
+  width: 100%;
+  height: auto; }
+  .item img {
+    width: 100%;
+    height: 50%;
+    display: block; }
+
+.se {
+  width: 100%;
+  -webkit-box-flex: 1;
+  position: relative;
+  z-index: 5; }
+
+.shou_bottom {
+  width: 100%; }
+  .shou_bottom dl {
+    width: 100%;
+    height: 1rem;
+    clear: both;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 0.1rem; }
+    .shou_bottom dl dt {
+      float: left;
+      width: 40%; }
+      .shou_bottom dl dt img {
+        width: 100%;
+        height: 0.7rem; }
+    .shou_bottom dl dd {
+      width: 60%;
+      height: auto;
+      float: right;
+      padding-left: 0.2rem;
+      padding-top: 0.1rem;
+      font-size: 0.14rem; }
+      .shou_bottom dl dd small {
+        width: 60%;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        color: #999;
+        font-size: 0.13rem; }
+        .shou_bottom dl dd small span {
+          float: right;
+          padding-right: 0.1rem;
+          line-height: 0.3rem;
+          font-size: 0.13rem; }
+
+/**************try1*******************/
+.left2 {
+  width: 10%;
+  float: left;
+  position: absolute;
+  line-height: 0.41rem;
+  left: 0.1rem;
+  color: #fff; }
+
+.right2 {
+  width: 90%;
+  float: left;
+  position: absolute;
+  line-height: 0.41rem;
+  text-align: center;
+  left: 5%;
+  font-size: 0.18rem; }
+
+.header1 {
+  width: 100%;
+  height: 0.33rem;
+  background: #282828;
+  position: relative;
+  z-index: 10;
+  color: #fff; }
+
+.left3 {
+  width: 15%;
+  float: left;
+  position: absolute;
+  line-height: 0.33rem;
+  left: 0.1rem;
+  color: #fff; }
+
+.right3 {
+  width: 90%;
+  float: left;
+  position: absolute;
+  line-height: 0.33rem;
+  text-align: center;
+  left: 5%;
+  font-size: 0.14rem;
+  font-weight: bold; }
+
+.se {
+  width: 100%;
+  -webkit-box-flex: 1;
+  position: relative;
+  z-index: 5; }
+
+.shiyong_top {
+  width: 100%;
+  position: relative;
+  padding: 0.05rem; }
+  .shiyong_top h1 {
+    width: 100%;
+    float: left;
+    height: 0.4rem;
+    padding-left: 0.3rem;
+    font-weight: bold;
+    font-size: 0.16rem; }
+  .shiyong_top a:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: block;
+    background: #FF6600;
+    border-radius: 10px;
+    float: left;
+    position: absolute;
+    top: 10px;
+    left: 20px; }
+  .shiyong_top img {
+    width: 100%;
+    height: auto; }
+
+/*************try2**************/
+.try2_top {
+  width: 100%;
+  padding: 0.1rem; }
+  .try2_top h2 {
+    font-size: 0.16rem;
+    font-weight: bold; }
+  .try2_top small {
+    font-size: 0.12rem;
+    color: #959595; }
+
+.try2_center {
+  width: 100%;
+  height: auto; }
+  .try2_center img {
+    width: 100%;
+    height: auto;
+    margin-top: 0.2rem; }
+  .try2_center ul {
+    width: 100%;
+    height: 0.3rem; }
+    .try2_center ul li {
+      width: 50%;
+      float: left;
+      text-align: center;
+      border-right: 1px solid #FF6804;
+      line-height: 0.3rem; }
+
+.try2_bottom {
+  width: 100%; }
+  .try2_bottom h3 {
+    width: 100%;
+    background: #B6B6B6;
+    text-align: center;
+    color: #fff;
+    line-height: 0.34rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.2rem; }
+  .try2_bottom p {
+    color: #5B5BFF;
+    display: block;
+    font-weight: bold;
+    font-size: 0.14rem;
+    padding: 0.1rem; }
+    .try2_bottom p span {
+      color: #FF0000;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 0.16rem; }
+    .try2_bottom p em {
+      color: #B22222;
+      font-size: 0.12rem;
+      display: inline-block;
+      font-weight: bold; }
+
+.footer {
+  width: 100%;
+  height: 0.31rem;
+  background: #FF6600;
+  position: relative;
+  z-index: 20; }
+  .footer button {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background: none;
+    line-height: 0.31rem; }
+
+/***********help**************/
+.header2 {
+  width: 100%;
+  height: 0.41rem;
+  background: #F7F8F8;
+  position: relative;
+  z-index: 10; }
+
+.left4 {
+  width: 10%;
+  float: left;
+  position: absolute;
+  line-height: 0.41rem;
+  left: 0.1rem; }
+
+.right4 {
+  width: 90%;
+  float: left;
+  position: absolute;
+  line-height: 0.41rem;
+  text-align: center;
+  left: 5%;
+  font-weight: bold; }
+
+.help_list {
+  width: 100%; }
+  .help_list ul {
+    width: 100%; }
+    .help_list ul li {
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      line-height: 0.34rem;
+      padding-left: 0.2rem; }
+
+/*# sourceMappingURL=shouye.css.map */

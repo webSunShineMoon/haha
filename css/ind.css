@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html, body, .box {
+  width: 100%;
+  height: 100%;
+  font-size: 100px; }
+
+.box {
+  display: -webkit-box;
+  -webkit-box-orient: vertical; }
+  .box .header {
+    height: 0.41rem;
+    width: 100%; }
+  .box footer {
+    height: 0.36rem;
+    width: 100%; }
+  .box .main {
+    -webkit-box-flex: 1;
+    overflow: auto; }
+
+.header {
+  height: 41px;
+  width: 100%;
+  position: relative; }
+  .header .sear {
+    width: 70%;
+    height: 0.22rem;
+    display: inline-block;
+    margin-left: 15%;
+    margin-top: 0.1rem;
+    border-radius: 0.05rem;
+    border: 1px solid #ccc;
+    background: url(../img/sear.png) left no-repeat;
+    background-size: auto 80%; }
+  .header .sao {
+    position: absolute;
+    width: 0.5rem;
+    padding-left: 0.05rem;
+    padding-top: 0.05rem; }
+    .header .sao img {
+      width: 0.2rem;
+      height: 0.16rem;
+      padding-left: 0.05rem; }
+  .header .qu {
+    position: absolute;
+    width: 0.45rem;
+    padding-left: 0.05rem;
+    padding-top: 0.05rem;
+    right: 0;
+    top: 0; }
+    .header .qu img {
+      width: 0.2rem;
+      height: 0.16rem;
+      padding-left: 0.05rem; }
+
+.main {
+  -webkit-box-flex: 1;
+  width: 100%;
+  margin-top: 0.07rem;
+  height: auto; }
+  .main .tu_ind {
+    width: 100%;
+    height: auto; }
+  .main .swiper-container {
+    height: 0.96rem;
+    width: 100%; }
+    .main .swiper-container img {
+      height: auto;
+      width: 100%; }
+  .main .DD_list {
+    width: 100%;
+    height: auto; }
+  .main .DD_dl {
+    width: 25%;
+    margin-top: 0.07rem;
+    float: left; }
+    .main .DD_dl img {
+      width: 0.35rem;
+      height: 0.35rem; }
+    .main .DD_dl dt {
+      text-align: center; }
+    .main .DD_dl dd {
+      color: #8a8a8a;
+      font-size: 0.08rem;
+      font-weight: bolder;
+      text-align: center; }
+  .main .head_p {
+    width: 100%;
+    height: 0.35rem;
+    background: #f7f8f8;
+    clear: both; }
+    .main .head_p img {
+      width: auto;
+      height: 70%;
+      padding-left: 0.22rem;
+      padding-top: 0.12rem; }
+  .main .head_top {
+    width: 100%;
+    height: 0.22rem; }
+    .main .head_top img {
+      width: 100%;
+      height: auto; }
+  .main .Big_dl dl {
+    float: left;
+    width: 33%; }
+  .main .Big_dl dt {
+    text-align: center; }
+  .main .Big_dl dd {
+    width: 100%; }
+    .main .Big_dl dd p {
+      font-size: 0.09rem;
+      line-height: 0.15rem;
+      padding: 0.08rem;
+      text-index: 2; }
+    .main .Big_dl dd .small {
+      color: #DB2242;
+      text-align: center;
+      padding: 0; }
+  .main .Big_dl img {
+    width: 0.8rem;
+    height: 0.98rem;
+    text-align: center; }
+
+/****************ind_top_dl_list********************/
+.head_top .sao {
+  top: 0.1rem; }
+  .head_top .sao img {
+    width: 0.1rem;
+    height: 0.13rem; }
+.head_top .qu {
+  top: 0.1rem; }
+
+.Dl_list {
+  height: 0.34rem;
+  width: 100%;
+  background: #4D4948; }
+  .Dl_list li {
+    float: left;
+    width: 50%;
+    text-align: center;
+    line-height: 0.34rem; }
+    .Dl_list li a {
+      color: #fff;
+      font-size: 0.1rem; }
+
+.ind_list_main {
+  background: #F7F8F8; }
+  .ind_list_main .hf_dl {
+    width: 100%; }
+    .ind_list_main .hf_dl dl {
+      margin-top: 0.08rem;
+      background: #fff; }
+    .ind_list_main .hf_dl img {
+      width: 0.52rem;
+      height: auto; }
+    .ind_list_main .hf_dl dt {
+      float: left;
+      margin-right: 0.1rem;
+      padding: 0 0.1rem; }
+    .ind_list_main .hf_dl dd {
+      float: left;
+      height: 0.85rem; }
+      .ind_list_main .hf_dl dd p {
+        font-size: 0.11rem;
+        line-height: 0.2rem;
+        color: #5A5858; }
+      .ind_list_main .hf_dl dd small {
+        color: #9C9C9C;
+        line-height: 0.2rem; }
+  .ind_list_main .U_p .user {
+    width: 0.44rem;
+    height: 0.16rem;
+    display: inline-block;
+    background: #DC214C;
+    color: #fff;
+    font-size: 0.12rem;
+    line-height: 0.16rem;
+    text-align: center;
+    border-radius: 0.05rem; }
+  .ind_list_main .U_p .user_num {
+    color: #DC214C;
+    margin-right: 0.06rem; }
+  .ind_list_main .U_p .hui {
+    background: #458AE5; }
+  .ind_list_main .U_p .num1 {
+    color: #458AE5; }
+
+/*********************Tab_list************************/
+.Tab_list {
+  width: 100%; }
+  .Tab_list li {
+    width: 33%; }
+
+.Tab_main .Tab_dl dd p {
+  font-size: 0.11rem;
+  font-weight: bolder;
+  margin-top: 0.1rem; }
+
+.footer {
+  width: 100%;
+  height: 0.36rem;
+  background: #F3F4F6;
+  position: relative;
+  z-index: 100; }
+  .footer ul {
+    width: 100%;
+    display: -webkit-box;
+    text-align: center; }
+    .footer ul li {
+      -webkit-box-flex: 1; }
+      .footer ul li a i {
+        font-size: 14px; }
+      .footer ul li a span {
+        font-size: 10px; }
+    .footer ul li.on a {
+      color: #F23030; }
+
+/*# sourceMappingURL=ind.css.map */

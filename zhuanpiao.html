@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chorme=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+	<title>专票资质</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/shouhou.css">
+</head>
+<body>
+	<div class="box">
+		<header class="header">
+			<a href="" class="left"><i class="icon-angle-left"></i></a>
+			<h1>专票资质</h1>
+		</header>
+		<div class="main" id="main">
+			<div>
+				<form action="" class="zhuanpiao_form">
+					<p><label for="">公司名称</label><input type="text" placeholder="请输入公司名称"></p>
+					<p><label for="">纳税人识别号</label><input type="text" placeholder="请输入识别号"></p>
+					<p><label for="">银行账号</label><input type="text" placeholder="请输入银行账号"></p>
+					<p><label for="">银行名称</label><input type="text" placeholder="请输入银行名称"></p>
+					<p><label for="">注册地址</label><input type="text" placeholder="请输入注册地址"></p>
+					<p><label for="">注册电话</label><input type="text" placeholder="请输入注册电话"></p>
+				</form>
+				<div class="zhuanpiao_text">
+					<p><a href="#">营业执照：</a><span>+</span></p>
+					<p><a href="#">纳税人资格证书：</a><span>+</span></p>
+					<p><a href="#">公司委托书：</a><span>+</span></p>
+					<button>确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script src="js/iscroll5.js"></script>
+    <script>
+       var myPage=new IScroll("#main",{
+        click: true,
+        probeType: 3, 
+        mouseWheel: true
+      })
+    </script>
+</html>
